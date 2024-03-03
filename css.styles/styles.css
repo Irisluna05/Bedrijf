@@ -15,6 +15,10 @@ p{
     font-family: 'avenir next';
 }
 
+.logo img{
+    width: 50px;
+    height: 50px;
+}
 
 .sieraden img{
 width: 200px;
@@ -31,6 +35,7 @@ border-radius: 30%;
     justify-content: space-between;
     justify-self: center;
 }
+
 .Buy{
     justify-content: center;
     margin: 10%;
