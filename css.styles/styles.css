@@ -15,20 +15,79 @@ p{
     font-family: 'avenir next';
 }
 
-.logo img{
-    width: 50px;
-    height: 50px;
+nav{
+    background-color: #af8ad2
 }
 
-.sieraden img{
-width: 200px;
-height: 200px;
-border-radius: 30%;
+.landing{
+    display: flex;
+    justify-content: space-around;
+    background-color:#dcdcdc;
+    margin: 2%;
 }
+
+.landing{
+    animation-duration: 8s;
+    animation-name: pop;
+}
+
+.landing :first-child{
+    font-size: large;
+}
+
+@keyframes pop{
+0%{ transform: translateX(0);}
+
+10%{ transform:translateY(-10px);}
+
+30%{ transform: translateY(30px);}
+
+50%{ transform: translateY(20px)}
+
+60%{ transform: translateY(10px);}
+
+100%{transform: translateY(0px);}
+}
+
+.landing a{
+    display: block;
+    font-size: larger;
+    justify-content: center;
+    justify-self: center;
+    background-color: #b995db;
+    padding: 3%;
+    margin: 15%;
+}
+
+.landing a:hover{
+    background-color: #b88cc2;
+    padding: 3%;
+}
+
 
 .sieraden{
     display: block;
 }
+
+.sieraden img{
+width: 300px;
+height: 300px;
+border-radius: 30%;
+padding: 5%;
+background-color: #5ca17e;
+}
+
+.sieraden img:hover{
+    background-color: #356c51;
+}
+
+
+.reclame{
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+}
+    
 
 .home{
     display: flex;
@@ -52,22 +111,20 @@ border-radius: 30%;
     transform: scale(1.1)
 }
 
-
-
 strike{
     color: #a66fb2;
 }
 
 figcaption{
     font-family: 'avenir next';
-    padding: 5%;
+    margin-top: 5%;
 }
 
-li{
-    font-family: 'avenir next';
-    padding: 5%;
+li a{
+        font-family: "Lucida Console", "Courier New";
 }
-h1,h2,h3,h4,h5, a{
+
+h1,h2,h3,h4,h5{
     display: flex;
     padding: 2%;
     justify-content: center;
@@ -80,22 +137,30 @@ text{
 }
 
 header{
-    background-color: #7fc9a4;
+    background-color: #c9a6d1;
+}
+
+.winkelmand{
+width: 25px;
+height: 25px;
+}
+
+
+.sale2{
+    background-color: #8dcbc8;
 }
 
 .Sale{
-    background-color: #ce8edd;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #8dcbc8;
 }
 
-.kleur h1{
-   color: #ce8edd;
-}
 .SALE{
     display: flex;
     justify-content: space-between;
     padding: 5%;
-    background-color: #8dcbc8;
 }
+
 
 .SALE img{
 width: 200px;
@@ -105,7 +170,6 @@ height: 200px;
 li a{
     color: black;
     border-radius: 20%;
-   border-radius: 20%;
    text-decoration: none;
 }
 
@@ -119,11 +183,7 @@ a{
 }
 
 a:hover{
-    color: gray;
-}
-
-li a:hover{
-    color: #ce8edd;
+    color: white;
 }
 
 ul{
@@ -151,6 +211,7 @@ div{
     display: flex;
     justify-content: center;
     justify-self: center;
+    margin: 2%;
     padding: 5%;
     outline-color: transparent;
     cursor: pointer;
@@ -175,18 +236,18 @@ form input{
 input{
     color: #000000;
     background: none;
-    padding:3%;
+    padding: 2%;
 }
 
 input:hover{
     color: #000000;
     background: white;
     border: #000000;
-    padding:3%;
+    padding:2%;
 }
 
 form button{
-    padding: 3%;
+    padding: 1%;
     background: #5ca17e;
     color: rgb(0, 0, 0);
     font-size: 1em
@@ -197,17 +258,19 @@ form button:hover{
 }
 
 
-.Zoek{
+.Zoek input{
+    font-size: medium;
     background-color: white;
-    border-radius: 20%;
-margin: 10%;
+padding: 2%;
+width: 500px;
 }
+
 
 
 .Overzicht{
  display: flex;
  justify-content: space-between;
- margin: 10%;
+ margin: 5%;
 }
 
 .Overzicht img{
@@ -219,13 +282,13 @@ margin: 10%;
 .ring{
     display: flex;
     justify-content: space-between;
-    margin: 5%;
+    margin: 2%;
     justify-self: center;
     border: #5ca17e;
     border-style: dotted;
 }
 .ring img{
-    width: 200px;
+    width: 300px;
     height: 300px;
 }
 
@@ -236,6 +299,21 @@ margin: 10%;
     margin: 10%;
     border: #5ca17e;
 }
+
+.row2{
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    background-color: #dcdcdc;
+    border-style: dotted;
+    margin: 5%;
+}
+
+.row2 img{
+    width: 300px;
+    height: 300px;
+}
+
 
 /* Met deze code heb ik de slider gemaakt.*/
 .media-scroller {
@@ -330,13 +408,14 @@ scroll-snap-align: start;
 /* Bij kleine devices staat de informatie naast elkaar*/
 footer{
     background-color: #7fc9a4;
-    display: block;
-    font-size: small;
+    display: flex;
+        justify-content: space-between;
+   
 }
 /* Bij grote devices staat de informatie onder elkaar*/
 @media (max-width:900px){footer{
     background-color: #7fc9a4;
-    display: flex;
-        justify-content: space-between;
+    display: block;
+    font-size: small;
 }
 }
